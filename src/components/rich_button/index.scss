@@ -1,0 +1,55 @@
+@import 'global';
+
+.rich-button {
+  border-radius: $medium-border-radius;
+  border-style: solid;
+  padding: $medium-padding $extra-large-padding;
+
+  &.borderless { border: none; }
+
+  &.transparent { background-color: transparent; }
+
+  &.extra-small { font-size: $paragraph-font-size; }
+
+  &.small { font-size: $sub-header-font-size; }
+
+  &.medium { font-size: $header-font-size; }
+
+  &.large { font-size: $large-header-font-size; }
+
+  &.extra-large { font-size: $sub-title-font-size; }
+
+  &.blue {
+    &.background {
+      &.primary {
+        background-color: $primary-blue;
+        color: $white;
+        &:hover { background-color: $secondary-blue; }
+      }
+      &.secondary {
+        color: $white;
+        background-color: $secondary-blue;
+        &:hover { background-color: $grey; }
+      }
+    }
+
+    &.text {
+      &.primary {
+        color: $primary-blue;
+        border-color: $primary-blue;
+        &:hover {
+          border-color: $secondary-blue;
+          color: $secondary-blue;
+        }
+      }
+      &.secondary {
+        color: $secondary-blue;
+        border-color: $secondary-blue;
+        &:hover {
+          border-color: $grey;
+          color: $grey;
+        }
+      }
+    }
+  }
+}
