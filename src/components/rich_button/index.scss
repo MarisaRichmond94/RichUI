@@ -1,53 +1,51 @@
-@import 'global';
-
 .rich-button {
-  border-radius: $medium-border-radius;
+  border-radius: 8px;
   border-style: solid;
-  padding: $medium-padding $extra-large-padding;
+  padding: 10px 20px;
 
   &.borderless { border: none; }
 
   &.transparent { background-color: transparent; }
 
-  &.extra-small { font-size: $paragraph-font-size; }
+  &.extra-small { font-size: 0.85rem; }
 
-  &.small { font-size: $sub-header-font-size; }
+  &.small { font-size: 1rem; }
 
-  &.medium { font-size: $header-font-size; }
+  &.medium { font-size: 1.25rem; }
 
-  &.large { font-size: $large-header-font-size; }
+  &.large { font-size: 1.5rem; }
 
-  &.extra-large { font-size: $sub-title-font-size; }
+  &.extra-large { font-size: 2rem; }
 
   &.blue {
     &.background {
       &.primary {
-        background-color: $primary-blue;
-        color: $white;
-        &:hover { background-color: $secondary-blue; }
+        background-color: #083F89;
+        color: #FFFFFF;
+        &:hover { background-color: #5BA1C5; }
       }
       &.secondary {
-        color: $white;
-        background-color: $secondary-blue;
-        &:hover { background-color: $grey; }
+        color: #FFFFFF;
+        background-color: #5BA1C5;
+        &:hover { background-color: #868686; }
       }
     }
 
     &.text {
       &.primary {
-        color: $primary-blue;
-        border-color: $primary-blue;
+        color: #083F89;
+        border-color: #083F89;
         &:hover {
-          border-color: $secondary-blue;
-          color: $secondary-blue;
+          border-color: #5BA1C5;
+          color: #5BA1C5;
         }
       }
       &.secondary {
-        color: $secondary-blue;
-        border-color: $secondary-blue;
+        color: #5BA1C5;
+        border-color: #5BA1C5;
         &:hover {
-          border-color: $grey;
-          color: $grey;
+          border-color: #868686;
+          color: #868686;
         }
       }
     }
