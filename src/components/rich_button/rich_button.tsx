@@ -1,18 +1,11 @@
-import './index.scss';
+import './rich_button.scss';
 
 import React, { ReactElement } from 'react';
 import classNames from 'classnames';
 
-interface RichButtonProps {
-  additionalClassNames?: String[];
-  children: String | ReactElement | ReactElement[];
-  mode?: 'primary' | 'secondary' | 'tertiary';
-  outline?: Boolean,
-  size?: 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large';
-  transparent?: Boolean;
-};
+import { RichButtonProps } from './rich_button.types';
 
-export const RichButton = ({
+const RichButton = ({
   additionalClassNames = [],
   children,
   mode = 'primary',
@@ -36,3 +29,5 @@ export const RichButton = ({
     </button>
   );
 };
+
+export default RichButton;

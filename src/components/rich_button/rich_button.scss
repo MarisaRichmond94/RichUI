@@ -21,13 +21,21 @@
     &.background {
       &.primary {
         background-color: #083F89;
+        border-color: #083F89;
         color: #FFFFFF;
-        &:hover { background-color: #5BA1C5; }
+        &:hover {
+          background-color: #5BA1C5;
+          border-color: #5BA1C5;
+        }
       }
       &.secondary {
-        color: #FFFFFF;
         background-color: #5BA1C5;
-        &:hover { background-color: #868686; }
+        border-color: #5BA1C5;
+        color: #FFFFFF;
+        &:hover {
+          background-color: #868686;
+          border-color: #868686;
+        }
       }
     }
 
