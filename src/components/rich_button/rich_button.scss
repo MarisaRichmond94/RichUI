@@ -1,11 +1,32 @@
 .rich-button {
-  border-radius: 8px;
-  border-style: solid;
-  padding: 10px 20px;
+  align-items: center;
+  display: flex;
+  padding: 15px 15px;
+  cursor: pointer;
+  user-select: none;
 
-  &.borderless { border: none; }
+  &.icon {
+    background-color: transparent;
+    border: none;
+  }
 
-  &.transparent { background-color: transparent; }
+  &.outline {
+    background-color: transparent;
+    border-radius: 8px;
+    border-style: solid;
+  }
+
+  &.solid {
+    border-radius: 8px;
+    border-style: solid;
+  }
+
+  &.underline {
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 2px;
+    padding-bottom: 5px;
+  }
 
   &.extra-small { font-size: 0.85rem; }
 
@@ -16,6 +37,51 @@
   &.large { font-size: 1.5rem; }
 
   &.extra-large { font-size: 2rem; }
+
+  &.grey {
+    &.background {
+      &.primary {
+        background-color: #737373;
+        border-color: #737373;
+        color: #FFFFFF;
+        &:hover {
+          background-color: #545454;
+          border-color: #545454;
+        }
+      }
+
+      &.secondary {
+        background-color: #D9D9D9;
+        border-color: #D9D9D9;
+        color: #FFFFFF;
+        &:hover {
+          background-color: #737373;
+          border-color: #737373;
+          color: #FFFFFF;
+        }
+      }
+    }
+
+    &.text {
+      &.primary {
+        color: #737373;
+        border-color: #737373;
+        &:hover {
+          border-color: #545454;
+          color: #545454;
+        }
+      }
+
+      &.secondary {
+        color: #D9D9D9;
+        border-color: #D9D9D9;
+        &:hover {
+          border-color: #737373;
+          color: #737373;
+        }
+      }
+    }
+  }
 
   &.blue {
     &.background {
@@ -28,6 +94,7 @@
           border-color: #5BA1C5;
         }
       }
+
       &.secondary {
         background-color: #5BA1C5;
         border-color: #5BA1C5;
@@ -48,6 +115,7 @@
           color: #5BA1C5;
         }
       }
+
       &.secondary {
         color: #5BA1C5;
         border-color: #5BA1C5;

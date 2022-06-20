@@ -1,6 +1,6 @@
 import './rich_button.scss';
 
-import React, { ReactElement } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 
 import { RichButtonProps } from './rich_button.types';
@@ -9,15 +9,11 @@ const RichButton = ({
   additionalClassNames = [],
   children,
   mode = 'primary',
-  outline = false,
   size = 'medium',
-  transparent = false,
+  type = 'solid',
   ...props
 }: RichButtonProps) => {
-  const classes = classNames('rich-button', mode, size, {
-    'borderless': !outline,
-    'transparent': transparent,
-  }, ...additionalClassNames);
+  const classes = classNames('rich-button', mode, size, type, ...additionalClassNames);
 
   return (
     <button

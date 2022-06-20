@@ -16,19 +16,29 @@ export const RichIconButton = () => (
     additionalClassNames={['blue', 'text']}
     mode='secondary'
     size='extra-large'
-    transparent
+    type='icon'
   >
     <FaReact />
   </RichButton>
 );
 
-export const RichTextButton = () => (
+export const RichSolidIconButton = () => (
+  <RichButton
+    additionalClassNames={['grey', 'background']}
+    mode='secondary'
+    size='extra-large'
+    type='solid'
+  >
+    <FaReact />
+  </RichButton>
+);
+
+export const RichSolidButton = () => (
   <RichButton
     additionalClassNames={['blue', 'background']}
     mode='secondary'
     size='small'
-    outline
-    transparent
+    type='solid'
   >
     Submit
   </RichButton>
@@ -37,20 +47,31 @@ export const RichTextButton = () => (
 export const RichOutlineTextButton = () => (
   <RichButton
     additionalClassNames={['blue', 'text']}
-    mode='secondary'
+    mode='primary'
     size='small'
-    outline
-    transparent
+    type='outline'
   >
     Submit
   </RichButton>
 );
 
-export const RichTextIconButton = () => (
+export const RichUnderlineButton = () => (
   <RichButton
-    additionalClassNames={['blue', 'background']}
-    mode='secondary'
+    additionalClassNames={['grey', 'text']}
+    mode='primary'
+    size='small'
+    type='underline'
+  >
+    Submit
+  </RichButton>
+);
+
+export const RichSolidIconTextButton = () => (
+  <RichButton
+    additionalClassNames={['grey', 'background']}
+    mode='primary'
     size='medium'
+    type='solid'
   >
     <span style={{ display: 'flex', alignItems: 'center' }}>
       <FaReact style={{ fontSize: '20px' }} />&nbsp;
