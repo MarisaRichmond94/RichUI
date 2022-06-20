@@ -3,7 +3,7 @@
 </p>
 <hr />
 
-<b>Richmond UI</b> contains foundational React UI components for shipping new features faster (much like other popular libraries like Material UI or Bootstrap, except styled the way I want them).
+<b>Richmond UI</b> contains foundational React UI components for shipping new features faster (much like other popular libraries like Material UI or Bootstrap, except styled the way I want them for my applications).
 
 ## Installation
 
