@@ -1,0 +1,35 @@
+.rich-collapsable-section {
+  user-select: none;
+
+  .header {
+    align-items: center;
+    display: flex;
+    color: #232332;
+    cursor: default;
+    margin: 10px;
+
+    div {
+      align-items: center;
+      display: flex;
+      &:last-child {
+        cursor: pointer;
+        margin-left: auto;
+      }
+    }
+  }
+
+  .divider {
+    background-color: #232332;
+    border: none;
+    height: 2px;
+    margin: auto;
+  }
+
+  &.off-white {
+    .header { color: #E3E5EC; }
+    .divider { background-color: #E3E5EC; }
+  }
+}
+
+.visible { display: block; }
+.hidden { display: none; }
