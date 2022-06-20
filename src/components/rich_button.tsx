@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 
 export interface RichButtonProps {
   additionalClassNames?: string[],
@@ -25,4 +25,23 @@ export enum ButtonStyle {
   outline = 'outline',
   solid = 'solid',
   icon = 'icon',
+};
+
+export const RichButton = ({
+  additionalClassNames = [],
+  children,
+  mode = Mode.primary,
+  size = Size.medium,
+  buttonStyle = ButtonStyle.solid,
+  ...props
+}: RichButtonProps) => {
+  return (
+    <button
+      type='button'
+      className={['rich-button', mode, size, buttonStyle, ...additionalClassNames].join(' ')}
+      {...props}
+    >
+      {children}
+    </button>
+  );
 };

@@ -1,11 +1,17 @@
-import './rich_collapsable_section.scss'
-
-import React, { useState } from 'react';
+import React, { ReactElement, useState } from 'react';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 
-import { RichCollapsableSectionProps } from './rich_collapsable_section.types';
+export interface RichCollapsableSectionProps {
+  children: ReactElement,
+  classNames?: string[],
+  icon?: ReactElement,
+  id: string,
+  isInitiallyVisible?: boolean,
+  sectionTitle: string,
+  onToggleCallback?: () => void,
+};
 
-const RichCollapsableSection = ({
+export const RichCollapsableSection = ({
   children,
   classNames = [],
   icon,
@@ -40,5 +46,3 @@ const RichCollapsableSection = ({
     </div>
   );
 };
-
-export default RichCollapsableSection;

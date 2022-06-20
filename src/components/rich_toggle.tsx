@@ -1,10 +1,13 @@
-import './rich_toggle.scss';
-
 import React from 'react';
 
-import { RichToggleProps } from './rich_toggle.types';
+export interface RichToggleProps {
+  onClick: () => void,
+  selected?: boolean,
+  selectedText?: string,
+  unSelectedText?: String,
+};
 
-const RichToggle = ({
+export const RichToggle = ({
   onClick,
   selected = false,
   selectedText = 'ON',
@@ -18,5 +21,3 @@ const RichToggle = ({
     </div>
   );
 };
-
-export default RichToggle;
