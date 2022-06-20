@@ -1,9 +1,7 @@
 name: CI
-
 on:
   push:
     branches: [ master ]
-
 jobs:
   build:
     if: "!contains(github.event.head_commit.message, 'skip ci')"
@@ -14,15 +12,12 @@ jobs:
       with:
         node-version: '14'
         check-latest: true
-
     - name: Install Pacakges
       run: npm ci
-
     - name: Build Step
       env:
         CI: ""
       run: npm run build
-
     - name: Run Semantic Release
       run: npx semantic-release
       env:
