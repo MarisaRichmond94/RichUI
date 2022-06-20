@@ -1,22 +1,21 @@
 import React from 'react';
 
 import RichButton from './rich_button';
+import { ButtonStyle, Mode, Size } from './rich_button.types';
 import { FaReact } from 'react-icons/fa';
 
 export default {
   title: 'Example/RichButton',
   component: RichButton,
-  argTypes: {
-
-  }
+  argTypes: {},
 };
 
 export const RichIconButton = () => (
   <RichButton
     additionalClassNames={['blue', 'text']}
-    mode='secondary'
-    size='extra-large'
-    type='icon'
+    mode={Mode.secondary}
+    size={Size.extraLarge}
+    buttonStyle={ButtonStyle.icon}
   >
     <FaReact />
   </RichButton>
@@ -25,9 +24,9 @@ export const RichIconButton = () => (
 export const RichSolidIconButton = () => (
   <RichButton
     additionalClassNames={['grey', 'background']}
-    mode='secondary'
-    size='extra-large'
-    type='solid'
+    mode={Mode.secondary}
+    size={Size.extraLarge}
+    buttonStyle={ButtonStyle.solid}
   >
     <FaReact />
   </RichButton>
@@ -36,9 +35,9 @@ export const RichSolidIconButton = () => (
 export const RichSolidButton = () => (
   <RichButton
     additionalClassNames={['blue', 'background']}
-    mode='secondary'
-    size='small'
-    type='solid'
+    mode={Mode.secondary}
+    size={Size.small}
+    buttonStyle={ButtonStyle.solid}
   >
     Submit
   </RichButton>
@@ -47,9 +46,9 @@ export const RichSolidButton = () => (
 export const RichOutlineTextButton = () => (
   <RichButton
     additionalClassNames={['blue', 'text']}
-    mode='primary'
-    size='small'
-    type='outline'
+    mode={Mode.primary}
+    size={Size.small}
+    buttonStyle={ButtonStyle.outline}
   >
     Submit
   </RichButton>
@@ -58,9 +57,9 @@ export const RichOutlineTextButton = () => (
 export const RichUnderlineButton = () => (
   <RichButton
     additionalClassNames={['grey', 'text']}
-    mode='primary'
-    size='small'
-    type='underline'
+    mode={Mode.primary}
+    size={Size.small}
+    buttonStyle={ButtonStyle.underline}
   >
     Submit
   </RichButton>
@@ -69,9 +68,9 @@ export const RichUnderlineButton = () => (
 export const RichSolidIconTextButton = () => (
   <RichButton
     additionalClassNames={['grey', 'background']}
-    mode='primary'
-    size='medium'
-    type='solid'
+    mode={Mode.primary}
+    size={Size.medium}
+    buttonStyle={ButtonStyle.solid}
   >
     <span style={{ display: 'flex', alignItems: 'center' }}>
       <FaReact style={{ fontSize: '20px' }} />&nbsp;
