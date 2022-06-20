@@ -11,10 +11,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Use Node.js (12.16.2)
+    - name: Use Node.js 18.4.0
       uses: actions/setup-node@v1
       with:
-        node-version: '12.16.2'
+        node-version: '18.4.0'
 
     - name: Install Pacakges
       run: npm ci
