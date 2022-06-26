@@ -1,130 +1,155 @@
+@import './styles/styles.scss';
+
 .rich-button {
-  align-items: center;
-  display: flex;
-  padding: 15px 20px;
+  // Basic button styling
+  @include centered-flex-box;
+  border-style: solid;
+  box-shadow: none !important;
+  font-family: $paragraph-font-family;
+  padding: $medium-padding $extra-large-padding;
   cursor: pointer;
   user-select: none;
 
+  // Button colors
+  &.blue {
+    border-color: $primary-blue;
+    background-color: $primary-blue;
+    color: $white;
+    &:hover {
+      border-color: $secondary-blue;
+      background-color: $secondary-blue;
+    }
+  }
+  &.green {
+    border-color: $primary-green;
+    background-color: $primary-green;
+    color: $white;
+    &:hover {
+      border-color: $secondary-green;
+      background-color: $secondary-green;
+    }
+  }
+  &.grey {
+    border-color: $grey;
+    background-color: $grey;
+    color: $white;
+    &:hover {
+      border-color: $light-grey;
+      background-color: $light-grey;
+    }
+  }
+  &.light-blue {
+    border-color: $secondary-blue;
+    background-color: $secondary-blue;
+    color: $white;
+    &:hover {
+      border-color: $grey;
+      background-color: $grey;
+    }
+  }
+  &.medium-grey {
+    border-color: $medium-grey;
+    background-color: $medium-grey;
+    color: $white;
+    &:hover {
+      border-color: $dark-grey;
+      background-color: $dark-grey;
+    }
+  }
+  &.off-black {
+    border-color: $off-black;
+    background-color: $off-black;
+    color: $white;
+    &:hover {
+      border-color: $medium-grey;
+      background-color: $medium-grey;
+    }
+  }
+  &.purple {
+    border-color: $primary-purple;
+    background-color: $primary-purple;
+    color: $white;
+    &:hover {
+      border-color: $secondary-purple;
+      background-color: $secondary-purple;
+    }
+  }
+  &.red {
+    border-color: $primary-red;
+    background-color: $primary-red;
+    color: $white;
+    &:hover {
+      border-color: $secondary-red;
+      background-color: $secondary-red;
+    }
+  }
+  &.teal {
+    border-color: $primary-teal;
+    background-color: $primary-teal;
+    color: $white;
+    &:hover {
+      border-color: $secondary-teal;
+      background-color: $secondary-teal;
+    }
+  }
+  &.transparent {
+    background-color: transparent !important;
+
+    &.blue {
+      color: $primary-blue;
+      &:hover { color: $secondary-blue; }
+    }
+    &.green {
+      color: $primary-green;
+      &:hover { color: $secondary-green; }
+    }
+    &.grey {
+      color: $grey;
+      &:hover { color: $light-grey; }
+    }
+    &.light-blue {
+      color: $secondary-blue;
+      &:hover { color: $grey; }
+    }
+    &.medium-grey {
+      color: $medium-grey;
+      &:hover { color: $dark-grey; }
+    }
+    &.off-black {
+      color: $off-black;
+      &:hover { color: $medium-grey; }
+    }
+    &.purple {
+      color: $primary-purple;
+      &:hover { color: $secondary-purple; }
+    }
+    &.red {
+      color: $primary-red;
+      &:hover { color: $secondary-red; }
+    }
+    &.teal {
+      color: $primary-teal;
+      &:hover { color: $secondary-teal; }
+    }
+  }
+
+  // Button types
   &.icon {
-    background-color: transparent;
     border: none;
-    padding: 5px;
+    padding: $small-padding $medium-padding;
   }
-
-  &.outline {
-    background-color: transparent;
-    border-radius: 8px;
-    border-style: solid;
-  }
-
-  &.solid {
-    border-radius: 8px;
-    border-style: solid;
-  }
-
+  &.solid, &.outline { border-radius: $small-border-radius; }
+  &.pill, &.outlinepill {  border-radius: $extra-large-border-radius; }
   &.underline {
-    background-color: transparent;
     border: none;
     border-bottom: solid 2px;
-    padding-bottom: 5px;
+    padding-bottom: $small-padding;
   }
 
-  &.extra-small { font-size: 0.85rem; }
-
-  &.small { font-size: 1rem; }
-
-  &.medium { font-size: 1.25rem; }
-
-  &.large { font-size: 1.5rem; }
-
-  &.extra-large { font-size: 2rem; }
-
-  &.grey {
-    &.background {
-      &.primary {
-        background-color: #737373;
-        border-color: #737373;
-        color: #FFFFFF;
-        &:hover {
-          background-color: #545454;
-          border-color: #545454;
-        }
-      }
-
-      &.secondary {
-        background-color: #D9D9D9;
-        border-color: #D9D9D9;
-        color: #FFFFFF;
-        &:hover {
-          background-color: #737373;
-          border-color: #737373;
-          color: #FFFFFF;
-        }
-      }
-    }
-
-    &.text {
-      &.primary {
-        color: #737373;
-        border-color: #737373;
-        &:hover {
-          border-color: #545454;
-          color: #545454;
-        }
-      }
-
-      &.secondary {
-        color: #D9D9D9;
-        border-color: #D9D9D9;
-        &:hover {
-          border-color: #737373;
-          color: #737373;
-        }
-      }
-    }
-  }
-
-  &.blue {
-    &.background {
-      &.primary {
-        background-color: #083F89;
-        border-color: #083F89;
-        color: #FFFFFF;
-        &:hover {
-          background-color: #5BA1C5;
-          border-color: #5BA1C5;
-        }
-      }
-
-      &.secondary {
-        background-color: #5BA1C5;
-        border-color: #5BA1C5;
-        color: #FFFFFF;
-        &:hover {
-          background-color: #868686;
-          border-color: #868686;
-        }
-      }
-    }
-
-    &.text {
-      &.primary {
-        color: #083F89;
-        border-color: #083F89;
-        &:hover {
-          border-color: #5BA1C5;
-          color: #5BA1C5;
-        }
-      }
-
-      &.secondary {
-        color: #5BA1C5;
-        border-color: #5BA1C5;
-        &:hover {
-          border-color: #868686;
-          color: #868686;
-        }
-      }
-    }
-  }
+  // Button sizes
+  &.extra-small { font-size: $paragraph-font-size; }
+  &.small { font-size: $sub-header-font-size; }
+  &.medium { font-size: $header-font-size; }
+  &.large { font-size: $large-header-font-size; }
+  &.extra-large { font-size: $small-title-font-size; }
 }

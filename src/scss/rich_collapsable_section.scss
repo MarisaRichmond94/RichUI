@@ -1,12 +1,14 @@
+@import './styles/styles.scss';
+
 .rich-collapsable-section {
   user-select: none;
 
   .header {
     align-items: center;
     display: flex;
-    color: #232332;
+    color: $off-black;
     cursor: default;
-    margin: 10px;
+    margin: $medium-margin;
 
     div {
       align-items: center;
@@ -18,18 +20,20 @@
     }
   }
 
+  &.clickable-header {
+    cursor: pointer;
+    .header-text { cursor: pointer; }
+  }
+
   .divider {
-    background-color: #232332;
+    background-color: $off-black;
     border: none;
     height: 2px;
     margin: auto;
   }
 
   &.off-white {
-    .header { color: #E3E5EC; }
-    .divider { background-color: #E3E5EC; }
+    .header { color: $off-white; }
+    .divider { background-color: $off-white; }
   }
 }
-
-.visible { display: block; }
-.hidden { display: none; }

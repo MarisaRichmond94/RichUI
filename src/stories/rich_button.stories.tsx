@@ -2,7 +2,7 @@ import { Story } from "@storybook/react";
 import React from 'react';
 import { FaReact } from 'react-icons/fa';
 
-import { ButtonStyle, Mode, RichButton, RichButtonProps, Size } from '../components/rich_button';
+import { ButtonStyle, RichButton, RichButtonProps, Size } from '../components/rich_button';
 
 export default {
   title: 'Example/RichButton',
@@ -13,59 +13,74 @@ const Template: Story<RichButtonProps> = args => <RichButton {...args} />;
 
 export const RichIconButton = Template.bind({});
 RichIconButton.args = {
-  children: <FaReact />,
-  additionalClassNames: ['blue', 'text'],
-  mode: Mode.secondary,
-  size: Size.extraLarge,
   buttonStyle: ButtonStyle.icon,
-};
-
-export const RichSolidIconButton = Template.bind({});
-RichSolidIconButton.args = {
   children: <FaReact />,
-  additionalClassNames: ['grey', 'background'],
-  mode: Mode.secondary,
+  classNames: ['light-blue'],
   size: Size.extraLarge,
-  buttonStyle: ButtonStyle.solid,
+  onClick: () => {},
 };
 
-export const RichSolidButton = Template.bind({});
-RichSolidButton.args = {
-  children: 'Submit',
-  additionalClassNames: ['blue', 'background'],
-  mode: Mode.secondary,
-  size: Size.small,
-  buttonStyle: ButtonStyle.solid,
-};
-
-export const RichOutlineTextButton = Template.bind({});
-RichOutlineTextButton.args = {
-  children: 'Submit',
-  additionalClassNames: ['blue', 'text'],
-  mode: Mode.primary,
-  size: Size.small,
+export const RichOutlineButton = Template.bind({});
+RichOutlineButton.args = {
   buttonStyle: ButtonStyle.outline,
+  children: 'Submit',
+  classNames: ['green'],
+  size: Size.small,
+  onClick: () => {},
 };
 
 export const RichUnderlineButton = Template.bind({});
 RichUnderlineButton.args = {
-  children: 'Submit',
-  additionalClassNames: ['grey', 'text'],
-  mode: Mode.primary,
-  size: Size.small,
   buttonStyle: ButtonStyle.underline,
+  children: 'Submit',
+  classNames: ['red'],
+  size: Size.small,
+  onClick: () => {},
 };
 
-export const RichSolidIconTextButton = Template.bind({});
-RichSolidIconTextButton.args = {
+export const RichSolidButton = Template.bind({});
+RichSolidButton.args = {
+  buttonStyle: ButtonStyle.solid,
   children: (
     <span style={{ display: 'flex', alignItems: 'center' }}>
       <FaReact style={{ fontSize: '20px' }} />&nbsp;
       Submit
     </span>
   ),
-  additionalClassNames: ['grey', 'background'],
-  mode: Mode.primary,
+  classNames: ['teal'],
   size: Size.medium,
+  onClick: () => {},
+};
+
+export const RichPillButton = Template.bind({});
+RichPillButton.args = {
+  buttonStyle: ButtonStyle.pill,
+  children: 'Submit',
+  classNames: ['green'],
+  size: Size.small,
+  onClick: () => {},
+};
+
+export const RichOutlinePillButton = Template.bind({});
+RichOutlinePillButton.args = {
+  buttonStyle: ButtonStyle.outlinepill,
+  children: 'Submit',
+  classNames: ['purple'],
+  size: Size.small,
+  onClick: () => {},
+};
+
+export const RichDisabledButton = Template.bind({});
+RichDisabledButton.args = {
   buttonStyle: ButtonStyle.solid,
+  children: (
+    <span style={{ display: 'flex', alignItems: 'center' }}>
+      <FaReact style={{ fontSize: '20px' }} />&nbsp;
+      Submit
+    </span>
+  ),
+  classNames: ['off-black'],
+  isDisabled: true,
+  size: Size.medium,
+  onClick: () => {},
 };

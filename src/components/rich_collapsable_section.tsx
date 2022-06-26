@@ -6,8 +6,9 @@ export interface RichCollapsableSectionProps {
   classNames?: string[],
   icon?: ReactElement,
   id: string,
-  isInitiallyVisible?: boolean,
+  initiallyVisible?: boolean,
   sectionTitle: string,
+  wholeHeaderClickable?: boolean,
   onToggleCallback?: () => void,
 };
 
@@ -16,11 +17,13 @@ export const RichCollapsableSection = ({
   classNames = [],
   icon,
   id,
-  isInitiallyVisible = true,
+  initiallyVisible = true,
   sectionTitle,
+  wholeHeaderClickable = false,
   onToggleCallback,
 }: RichCollapsableSectionProps) => {
-  const [isVisible, setIsVisible] = useState(isInitiallyVisible);
+  const [isVisible, setIsVisible] = useState(initiallyVisible);
+  if (wholeHeaderClickable) classNames.push('clickable-header')
 
   const onToggle = (updatedIsVisible: boolean): void => {
     setIsVisible(updatedIsVisible);
@@ -29,13 +32,13 @@ export const RichCollapsableSection = ({
 
   return (
     <div id={id} className={['rich-collapsable-section', ...classNames].join(' ')}>
-      <div className='header header-text'>
+      <div className='header header-text' onClick={wholeHeaderClickable ? () => onToggle(!isVisible) : () => {}}>
         <div className='title'>{icon}&nbsp;&nbsp;{sectionTitle}</div>
-        <div>
+        <div onClick={wholeHeaderClickable ? () => {} : () => onToggle(!isVisible)}>
           {
             isVisible
-              ? <IoIosArrowDown onClick={() => onToggle(false)}/>
-              : <IoIosArrowUp onClick={() => onToggle(true)}/>
+              ? <IoIosArrowDown />
+              : <IoIosArrowUp  />
           }
         </div>
       </div>

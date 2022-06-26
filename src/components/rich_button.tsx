@@ -1,16 +1,12 @@
 import React, { ReactElement } from 'react';
 
 export interface RichButtonProps {
-  additionalClassNames?: string[],
-  children: string | ReactElement | ReactElement[],
-  mode?: `${Mode}`,
-  size?: `${Size}`,
   buttonStyle?: `${ButtonStyle}`,
-};
-
-export enum Mode {
-  primary = 'primary',
-  secondary = 'secondary',
+  children: string | ReactElement | ReactElement[],
+  classNames?: string[],
+  isDisabled?: boolean,
+  size?: `${Size}`,
+  onClick: () => void,
 };
 
 export enum Size {
@@ -20,26 +16,39 @@ export enum Size {
   large = 'large',
   extraLarge = 'extra-large',
 };
+
 export enum ButtonStyle {
-  underline = 'underline',
-  outline = 'outline',
-  solid = 'solid',
   icon = 'icon',
+  outline = 'outline',
+  outlinepill = 'outlinepill',
+  pill = 'pill',
+  solid = 'solid',
+  underline = 'underline',
+};
+
+enum TRANSPARENT_STYLES {
+  icon = 'icon',
+  outline = 'outline',
+  outlinepill = 'outlinepill',
+  underline = 'underline',
 };
 
 export const RichButton = ({
-  additionalClassNames = [],
-  children,
-  mode = Mode.primary,
-  size = Size.medium,
   buttonStyle = ButtonStyle.solid,
-  ...props
+  children,
+  classNames = [],
+  isDisabled = false,
+  size = Size.medium,
+  onClick,
 }: RichButtonProps) => {
+  const transparent = buttonStyle in TRANSPARENT_STYLES ? 'transparent' : '';
+
   return (
     <button
+      className={['rich-button', size, buttonStyle, transparent, ...classNames].join(' ')}
       type='button'
-      className={['rich-button', mode, size, buttonStyle, ...additionalClassNames].join(' ')}
-      {...props}
+      onClick={onClick}
+      disabled={isDisabled}
     >
       {children}
     </button>
