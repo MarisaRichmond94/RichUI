@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { ButtonStyle, RichButton, Size } from './rich_button';
-import { BsCheckSquare, BsSquare } from 'react-icons/bs';
+import { BsCheck2Square, BsSquare } from 'react-icons/bs';
 
 export interface RichCheckboxProps {
   classNames?: string[],
@@ -29,7 +29,7 @@ export const RichCheckbox = ({
         isDisabled={isDisabled}
         size={Size.small}
       >
-        {isActive ? <BsCheckSquare /> : <BsSquare />}
+        {isActive ? <BsCheck2Square /> : <BsSquare />}
       </RichButton>
       <div className='sub-header-text'>{text}</div>
     </div>
