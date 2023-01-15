@@ -3,8 +3,8 @@ import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
 import { BsGithub } from 'react-icons/bs';
 
+import { Color, Size, Type } from "./enums";
 import RichButton, { RichButtonProps } from "./RichButton";
-import { Size, Type } from "./Types";
 
 export default {
   title: "Components/RichButton",
@@ -17,8 +17,15 @@ const Template: Story<RichButtonProps> = (args) => (
   </RichButton>
 );
 
-export const BaseRichButton = Template.bind({});
-BaseRichButton.args = { onClick: () => {}, children: 'Click Me' };
+export const Base = Template.bind({});
+Base.args = { onClick: () => {}, children: 'Click Me' };
 
-export const RichIconButton = Template.bind({});
-RichIconButton.args = { onClick: () => {}, children: <BsGithub />, type: Type.Icon, size: Size.ExtraLarge };
+export const Icon = Template.bind({});
+Icon.args = {
+  onClick: () => {},
+  children: <BsGithub />,
+  color: Color.PrimaryPurple,
+  type: Type.Icon,
+  size: Size.ExtraLarge,
+  style: { fontSize: '80px' },
+};

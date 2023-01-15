@@ -329,7 +329,7 @@
     padding: $small-padding $medium-padding;
   };
   &.solid, &.outline { border-radius: $small-border-radius; };
-  &.pill, &.outlinepill {  border-radius: $extra-large-border-radius; };
+  &.pill, &.outline-pill {  border-radius: $extra-large-border-radius; };
   &.underline {
     border: none;
     border-bottom: solid 2px;

@@ -34,22 +34,14 @@ enum Size {
 enum Type {
   Icon = 'icon',
   Outline = 'outline',
-  Outlinepill = 'outlinepill',
+  OutlinePill = 'outline-pill',
   Pill = 'pill',
   Solid = 'solid',
   Underline = 'underline',
-};
-
-enum TransparentTypes {
-  icon = 'icon',
-  outline = 'outline',
-  outlinepill = 'outlinepill',
-  underline = 'underline',
 };
 
 export {
   Color,
   Size,
   Type,
-  TransparentTypes,
 };

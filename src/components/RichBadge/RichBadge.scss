@@ -1,0 +1,25 @@
+@import '../../scss/global.scss';
+
+.rich-badge {
+  position: relative;
+  display: inline-block;
+
+  .content {
+    border-radius: 50%;
+    color: $off-white;
+    font-size: 6px;
+    padding: 1px 3px;
+    position: absolute;
+    z-index: 1;
+
+    &.primary-red { background-color: $primary-red; };
+    &.secondary-blue { background-color: $secondary-blue; };
+    &.primary-green { background-color: $primary-green; };
+
+    &.top { top: 0; };
+    &.bottom { bottom: 4px; };
+
+    &.right { right: 0; };
+    &.left { left: 0; };
+  };
+};
