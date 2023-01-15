@@ -32,8 +32,8 @@ export default [
       commonjs(),
       typescript({ tsconfig: './tsconfig.json' }),
       scss({
+        fileName: 'bundle.css',
         output: true,
-        failOnError: true,
         outputStyle: 'compressed',
       }),
 
@@ -45,7 +45,6 @@ export default [
     input: 'dist/esm/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     plugins: [dts()],
-
     external: [/\.scss$/],
   },
 ];

@@ -1,7 +1,6 @@
-@import 'global.scss';
+@import '../../scss/global.scss';
 
 .rich-button {
-  // Basic button styling
   @include centered-flex-box;
   border-style: solid;
   box-shadow: none !important;
@@ -11,46 +10,28 @@
   cursor: pointer;
   user-select: none;
 
-  // Button colors
-  &.blue {
-    border-color: $primary-blue;
-    background-color: $primary-blue;
-    color: $white;
-    &:hover {
-      border-color: $secondary-blue;
-      background-color: $secondary-blue;
-    };
-  };
-  &.green {
-    border-color: $primary-green;
-    background-color: $primary-green;
-    color: $white;
-    &:hover {
-      border-color: $secondary-green;
-      background-color: $secondary-green;
-    };
-  };
-  &.grey {
-    border-color: $grey;
-    background-color: $grey;
-    color: $white;
+  // Neutral Button Colors
+  &.white {
+    border-color: $white;
+    background-color: $white;
+    color: $off-black;
     &:hover {
       border-color: $light-grey;
       background-color: $light-grey;
     };
   };
-  &.light-blue {
-    border-color: $secondary-blue;
-    background-color: $secondary-blue;
-    color: $white;
+  &.off-white {
+    border-color: $off-white;
+    background-color: $off-white;
+    color: $off-black;
     &:hover {
-      border-color: $grey;
-      background-color: $grey;
+      border-color: $light-grey;
+      background-color: $light-grey;
     };
   };
-  &.medium-grey {
-    border-color: $medium-grey;
-    background-color: $medium-grey;
+  &.black {
+    border-color: $black;
+    background-color: $black;
     color: $white;
     &:hover {
       border-color: $dark-grey;
@@ -66,25 +47,44 @@
       background-color: $medium-grey;
     };
   };
-  &.off-white {
-    border-color: $off-white;
-    background-color: $off-white;
-    color: $off-black;
-    &:hover {
-      border-color: $medium-grey;
-      background-color: $medium-grey;
-    };
-  };
-  &.purple {
-    border-color: $primary-purple;
-    background-color: $primary-purple;
+  &.light-grey {
+    border-color: $light-grey;
+    background-color: $light-grey;
     color: $white;
     &:hover {
-      border-color: $secondary-purple;
-      background-color: $secondary-purple;
+      border-color: $off-white;
+      background-color: $off-white;
     };
   };
-  &.red {
+  &.grey {
+    border-color: $grey;
+    background-color: $grey;
+    color: $white;
+    &:hover {
+      border-color: $dark-grey;
+      background-color: $dark-grey;
+    };
+  };
+  &.medium-grey {
+    border-color: $medium-grey;
+    background-color: $medium-grey;
+    color: $white;
+    &:hover {
+      border-color: $dark-grey;
+      background-color: $dark-grey;
+    };
+  };
+  &.dark-grey {
+    border-color: $dark-grey;
+    background-color: $dark-grey;
+    color: $white;
+    &:hover {
+      border-color: $off-black;
+      background-color: $off-black;
+    };
+  };
+  // Non-Neutral Button Colors
+  &.primary-red {
     border-color: $primary-red;
     background-color: $primary-red;
     color: $white;
@@ -93,7 +93,52 @@
       background-color: $secondary-red;
     };
   };
-  &.teal {
+  &.secondary-red {
+    border-color: $secondary-red;
+    background-color: $secondary-red;
+    color: $white;
+    &:hover {
+      border-color: $primary-red;
+      background-color: $primary-red;
+    };
+  };
+  &.primary-yellow {
+    border-color: $primary-yellow;
+    background-color: $primary-yellow;
+    color: $white;
+    &:hover {
+      border-color: $secondary-yellow;
+      background-color: $secondary-yellow;
+    };
+  };
+  &.secondary-yellow {
+    border-color: $secondary-yellow;
+    background-color: $secondary-yellow;
+    color: $white;
+    &:hover {
+      border-color: $primary-yellow;
+      background-color: $primary-yellow;
+    };
+  };
+  &.primary-green {
+    border-color: $primary-green;
+    background-color: $primary-green;
+    color: $white;
+    &:hover {
+      border-color: $secondary-green;
+      background-color: $secondary-green;
+    };
+  };
+  &.secondary-green {
+    border-color: $secondary-green;
+    background-color: $secondary-green;
+    color: $white;
+    &:hover {
+      border-color: $primary-green;
+      background-color: $primary-green;
+    };
+  };
+  &.primary-teal {
     border-color: $primary-teal;
     background-color: $primary-teal;
     color: $white;
@@ -102,56 +147,183 @@
       background-color: $secondary-teal;
     };
   };
+  &.secondary-teal {
+    border-color: $secondary-teal;
+    background-color: $secondary-teal;
+    color: $white;
+    &:hover {
+      border-color: $primary-teal;
+      background-color: $primary-teal;
+    };
+  };
+  &.primary-blue {
+    border-color: $primary-blue;
+    background-color: $primary-blue;
+    color: $white;
+    &:hover {
+      border-color: $secondary-blue;
+      background-color: $secondary-blue;
+    };
+  };
+  &.secondary-blue {
+    border-color: $secondary-blue;
+    background-color: $secondary-blue;
+    color: $white;
+    &:hover {
+      border-color: $primary-blue;
+      background-color: $primary-blue;
+    };
+  };
+  &.primary-purple {
+    border-color: $primary-purple;
+    background-color: $primary-purple;
+    color: $white;
+    &:hover {
+      border-color: $secondary-purple;
+      background-color: $secondary-purple;
+    };
+  };
+  &.secondary-purple {
+    border-color: $secondary-purple;
+    background-color: $secondary-purple;
+    color: $white;
+    &:hover {
+      border-color: $primary-purple;
+      background-color: $primary-purple;
+    };
+  };
   &.transparent {
     background-color: transparent !important;
 
-    &.blue {
-      color: $primary-blue;
-      &:hover { color: $secondary-blue; };
-    };
-    &.green {
-      color: $primary-green;
-      &:hover { color: $secondary-green; };
-    };
-    &.grey {
-      color: $grey;
-      &:hover { color: $light-grey; };
-    };
-    &.light-blue {
-      color: $secondary-blue;
-      &:hover { color: $grey; };
-    };
-    &.medium-grey {
-      color: $medium-grey;
-      &:hover { color: $dark-grey; };
-    };
-    &.off-black {
-      color: $off-black;
-      &:hover { color: $medium-grey; };
+    // Neutral Button Colors
+    &.white {
+      color: $white;
+      &:hover {
+        color: $light-grey;
+      };
     };
     &.off-white {
       color: $off-white;
-      &:hover { color: $medium-grey; };
+      &:hover {
+        color: $light-grey;
+      };
     };
-    &.purple {
-      color: $primary-purple;
-      &:hover { color: $secondary-purple; };
+    &.black {
+      color: $black;
+      &:hover {
+        color: $dark-grey;
+      };
     };
-    &.red {
+    &.off-black {
+      color: $off-black;
+      &:hover {
+        color: $medium-grey;
+      };
+    };
+    &.light-grey {
+      color: $light-grey;
+      &:hover {
+        color: $off-white;
+      };
+    };
+    &.grey {
+      color: $grey;
+      &:hover {
+        color: $dark-grey;
+      };
+    };
+    &.medium-grey {
+      color: $medium-grey;
+      &:hover {
+        color: $dark-grey;
+      };
+    };
+    &.dark-grey {
+      color: $dark-grey;
+      &:hover {
+        color: $off-black;
+      };
+    };
+    // Non-Neutral Button Colors
+    &.primary-red {
       color: $primary-red;
-      &:hover { color: $secondary-red; };
+      &:hover {
+        color: $secondary-red;
+      };
     };
-    &.teal {
+    &.secondary-red {
+      color: $secondary-red;
+      &:hover {
+        color: $primary-red;
+      };
+    };
+    &.primary-yellow {
+      color: $primary-yellow;
+      &:hover {
+        color: $secondary-yellow;
+      };
+    };
+    &.secondary-yellow {
+      color: $secondary-yellow;
+      &:hover {
+        color: $primary-yellow;
+      };
+    };
+    &.primary-green {
+      color: $primary-green;
+      &:hover {
+        color: $secondary-green;
+      };
+    };
+    &.secondary-green {
+      color: $secondary-green;
+      &:hover {
+        color: $primary-green;
+      };
+    };
+    &.primary-teal {
       color: $primary-teal;
-      &:hover { color: $secondary-teal; };
+      &:hover {
+        color: $secondary-teal;
+      };
     };
+    &.secondary-teal {
+      color: $secondary-teal;
+      &:hover {
+        color: $primary-teal;
+      };
+    };
+    &.primary-blue {
+      color: $primary-blue;
+      &:hover {
+        color: $secondary-blue;
+      };
+    };
+    &.secondary-blue {
+      color: $secondary-blue;
+      &:hover {
+        color: $primary-blue;
+      };
+    };
+    &.primary-purple {
+      color: $primary-purple;
+      &:hover {
+        color: $secondary-purple;
+      };
+    };
+    &.secondary-purple {
+      color: $secondary-purple;
+      &:hover {
+        color: $primary-purple;
+      };
+    };
+
     &:disabled {
       color: $disabled-grey;
       &:hover { color: $disabled-grey; };;
     };
   };
 
-  // Button types
   &.icon {
     border: none;
     padding: $small-padding $medium-padding;
@@ -164,7 +336,6 @@
     padding-bottom: $small-padding;
   };
 
-  // Button sizes
   &.extra-small { font-size: $paragraph-font-size; };
   &.small { font-size: $sub-header-font-size; };
   &.medium { font-size: $header-font-size; };

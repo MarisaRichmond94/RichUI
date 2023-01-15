@@ -2,32 +2,34 @@ import './RichButton.scss';
 
 import React, { FC, PropsWithChildren } from 'react';
 
-import { ButtonSize, ButtonType, TransparentTypes } from './Types';
+import { Color, Size, Type, TransparentTypes } from './Types';
 
-interface IRichButton extends PropsWithChildren {
+export interface RichButtonProps extends PropsWithChildren {
   onClick: (event: any) => void,
 
   classNames?: string[],
+  color?: Color,
   id?: string,
   isDisabled?: boolean,
-  size?: ButtonSize,
+  size?: Size,
   style?: object,
-  type?: ButtonType,
+  type?: Type,
 };
 
-const RichButton: FC<IRichButton> = ({
+const RichButton: FC<RichButtonProps> = ({
   children,
   onClick,
 
   classNames = [],
+  color = Color.Grey,
   id,
   isDisabled = false,
-  size = ButtonSize.medium,
+  size = Size.Medium,
   style = {},
-  type = ButtonType.solid,
+  type = Type.Solid,
 }) => (
   <button
-    className={['rich-button', size, type, type in TransparentTypes ? 'transparent' : '', ...classNames].join(' ')}
+    className={['rich-button', color, size, type, type in TransparentTypes ? 'transparent' : '', ...classNames].join(' ')}
     disabled={isDisabled}
     id={id}
     onClick={(event: any) => onClick(event)}

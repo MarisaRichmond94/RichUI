@@ -1,2 +1,6 @@
-export { default } from './RichButton';
-export { ButtonSize, ButtonType } from './Types';
+export { default, RichButtonProps } from './RichButton';
+export {
+  Color as RichButtonColor,
+  Size as RichButtonSize,
+  Type as RichButtonType,
+} from './Types';

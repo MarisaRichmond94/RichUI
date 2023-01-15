@@ -1,1 +1,1 @@
-export { default as RichButton, ButtonSize, ButtonType } from './RichButton';
+export { default as RichButton, RichButtonColor, RichButtonSize, RichButtonType } from './RichButton';
