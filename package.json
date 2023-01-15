@@ -1,6 +1,6 @@
 {
   "name": "@MarisaRichmond94/rich_ui",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "A reusable UI React component library",
   "author": "MarisaRichmond94",
   "license": "ISC",
@@ -12,92 +12,21 @@
   "private": false,
   "types": "dist/index.d.ts",
   "devDependencies": {
-    "@babel/core": "^7.18.5",
-    "@babel/preset-react": "^7.17.12",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^24.0.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.5.0",
-    "@semantic-release/changelog": "^6.0.1",
-    "@semantic-release/commit-analyzer": "^9.0.2",
-    "@semantic-release/git": "^10.0.1",
-    "@semantic-release/npm": "^9.0.1",
-    "@semantic-release/release-notes-generator": "^10.0.3",
-    "@storybook/addon-actions": "^6.5.9",
-    "@storybook/addon-essentials": "^6.5.9",
-    "@storybook/addon-interactions": "^6.5.9",
-    "@storybook/addon-links": "^6.5.9",
-    "@storybook/builder-webpack5": "^6.5.9",
-    "@storybook/manager-webpack5": "^6.5.9",
-    "@storybook/react": "^6.5.9",
-    "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.14",
-    "babel-loader": "^8.2.5",
-    "babel-preset-react-app": "^10.0.1",
-    "classnames": "^2.3.1",
-    "copyfiles": "^2.4.1",
-    "css-loader": "^6.7.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.4.0",
-    "rimraf": "^3.0.2",
     "rollup": "^2.79.1",
     "rollup-plugin-dts": "^4.2.3",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-scss": "^3.0.0",
-    "rollup-plugin-terser": "^7.0.2",
     "sass": "^1.52.3",
     "sass-loader": "^10.2.0",
-    "semantic-release": "^19.0.3",
-    "style-loader": "^3.3.1",
     "typescript": "^4.7.4"
   },
-  "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
   "scripts": {
-    "build": "npm run clean & rollup -c & tsc & npm run copy-files",
-    "build-storybook": "build-storybook",
-    "clean": "rimraf dist/",
-    "copy-files": "copyfiles -u 1 src/scss/**/* dist/dts",
-    "publish": "node node_modules/publish-flatten --flatten dist --strip scripts",
-    "publish:dryrun": "npm run publish -- --dry-run",
-    "start": "rollup -c -w",
-    "semantic-release": "semantic-release",
-    "storybook": "start-storybook -p 6006"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      }
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/MarisaRichmond94/RichUI.git"
+    "start": "rollup -c -w"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/MarisaRichmond94"
