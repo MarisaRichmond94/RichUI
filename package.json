@@ -1,6 +1,6 @@
 {
   "name": "@MarisaRichmond94/rich_ui",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A reusable UI React component library",
   "author": "MarisaRichmond94",
   "license": "ISC",
@@ -14,19 +14,22 @@
   "devDependencies": {
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^24.0.0",
+    "@rollup/plugin-image": "^3.0.1",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.5.0",
     "@types/react": "^18.0.14",
     "react": "^18.2.0",
     "rollup": "^2.79.1",
     "rollup-plugin-dts": "^4.2.3",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-scss": "^3.0.0",
+    "rollup-plugin-terser": "^7.0.2",
     "sass": "^1.52.3",
     "sass-loader": "^10.2.0",
     "typescript": "^4.7.4"
   },
   "scripts": {
-    "start": "rollup -c -w"
+    "rollup": "rollup -c"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/MarisaRichmond94"
