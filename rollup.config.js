@@ -1,45 +1,50 @@
-import { babel } from "@rollup/plugin-babel";
-import external from "rollup-plugin-peer-deps-external";
 import resolve from "@rollup/plugin-node-resolve";
-import dts from 'rollup-plugin-dts';
-import scss from "rollup-plugin-scss";
+import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
+import dts from "rollup-plugin-dts";
+
 import { terser } from "rollup-plugin-terser";
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import image from '@rollup/plugin-image';
+
+
+const packageJson = require("./package.json");
 
 export default [
   {
-    input: "./src/index.ts",
+    input: "src/index.ts",
     output: [
       {
-        file: "dist/index.js",
+        file: packageJson.main,
         format: "cjs",
+        sourcemap: true,
       },
       {
-        file: "dist/index.es.js",
-        format: "es",
-        exports: "named",
+        file: packageJson.module,
+        format: "esm",
+        sourcemap: true,
       },
     ],
     plugins: [
+      peerDepsExternal(),
+      resolve(),
+      commonjs(),
+      typescript({ tsconfig: "./tsconfig.json" }),
       scss({
         output: true,
         failOnError: true,
         outputStyle: "compressed",
       }),
-      babel({
-        exclude: "node_modules/**",
-        presets: ["@babel/preset-react"],
-      }),
-      external(),
-      resolve(),
-      typescript(),
+
       terser(),
+      image()
     ],
   },
   {
-    input: './dist/dts/index.d.ts',
-    output: [{ file: 'dist/index.d.ts', format: 'es' }],
-    external: [/\.scss$/],
+    input: "dist/esm/types/index.d.ts",
+    output: [{ file: "dist/index.d.ts", format: "esm" }],
     plugins: [dts()],
-  }
+
+    external: [/\.scss$/],
+  },
 ];
