@@ -1,8 +1,8 @@
 {
-  "name": "rich_ui",
+  "name": "@MarisaRichmond94/RichUI",
   "version": "0.1.0",
   "description": "A reusable UI React component library",
-  "author": "Marisa Richmond",
+  "author": "MarisaRichmond94",
   "license": "ISC",
   "files": [
     "dist"
