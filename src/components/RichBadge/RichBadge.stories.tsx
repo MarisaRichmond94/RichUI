@@ -16,8 +16,13 @@ const Template: Story<RichBadgeProps> = (args) => (
   </RichBadge>
 );
 
-export const Base = Template.bind({});
-Base.args = {
+export const BadgeNotification = Template.bind({});
+BadgeNotification.args = {
   children: <FcPlanner />,
   content: 5,
+};
+
+export const DotBadgeNotification = Template.bind({});
+DotBadgeNotification.args = {
+  children: <FcPlanner />,
 };

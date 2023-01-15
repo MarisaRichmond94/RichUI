@@ -2,24 +2,49 @@
 
 .rich-badge {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  flex-shrink: 0;
+  vertical-align: middle;
 
   .content {
-    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+    font-size: 1.5rem;
+    height: 1em;
+    width: 1em;
+  };
+
+  .badge {
+    align-items: center;
+    border-radius: 10px;
     color: $off-white;
-    font-size: 6px;
-    padding: 1px 3px;
+    display: flex;
+    flex-flow: row wrap;
+    font-weight: 500;
+    font-size: 0.5rem;
+    height: 10px;
+    justify-content: center;
+    min-width: 5px;
+    padding: 0 3px;
     position: absolute;
+    transition: transform 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     z-index: 1;
 
+    // Color
     &.primary-red { background-color: $primary-red; };
     &.secondary-blue { background-color: $secondary-blue; };
     &.primary-green { background-color: $primary-green; };
-
+    // Horizontal
     &.top { top: 0; };
-    &.bottom { bottom: 4px; };
-
+    &.bottom { bottom: 0; };
+    // Vertical
     &.right { right: 0; };
     &.left { left: 0; };
+
+    &.dot {
+      height: 5px;
+      padding: 0;
+      width: 5px;
+    };
   };
 };

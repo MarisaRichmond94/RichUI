@@ -1,38 +1,38 @@
 import './RichBadge.scss';
 
 import React, { FC, PropsWithChildren } from 'react';
+
+import { determineBadgeStyling } from './effects';
 import { Color, Horizontal, Veritcal } from './enums';
 
 export interface RichBadgeProps extends PropsWithChildren {
-  content: string | number,
-
   classNames?: string[],
   color?: Color,
+  content?: string | number,
   horizontal?: Horizontal,
-  style?: object,
   vertical?: Veritcal,
 };
 
 const RichBadge: FC<RichBadgeProps> = ({
   children,
-  content,
 
   classNames = [],
   color = Color.Alert,
+  content,
   horizontal = Horizontal.Top,
-  style = {},
   vertical = Veritcal.Right,
-}) => {
-  return (
-    <div className={['rich-badge', ...classNames].join(' ')} style={style}>
-      <span className={['content', color, horizontal, vertical].join(' ')}>
-        {content}
-      </span>
-      <span className={['container'].join(' ')}>
-        {children}
-      </span>
+}) => (
+  <span className={['rich-badge', ...classNames].join(' ')}>
+    <div className={['content'].join(' ')}>
+      {children}
     </div>
-  );
-};
+    <span
+      className={['badge', !content ? 'dot' : '', color, horizontal, vertical].join(' ')}
+      style={determineBadgeStyling({ content, horizontal, vertical })}
+    >
+      {content}
+    </span>
+  </span>
+);
 
 export default RichBadge;
