@@ -10,6 +10,10 @@
   cursor: pointer;
   user-select: none;
 
+  &:disabled {
+    opacity: 0.3;
+  };
+
   // Neutral Button Colors
   &.white {
     border-color: $white;
@@ -316,11 +320,6 @@
       &:hover {
         color: $primary-purple;
       };
-    };
-
-    &:disabled {
-      color: $disabled-grey;
-      &:hover { color: $disabled-grey; };;
     };
   };
 
