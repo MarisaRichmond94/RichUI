@@ -24,11 +24,11 @@ enum Color {
 };
 
 enum Size {
-  ExtraSmall = 'extra-small',
-  Small = 'small',
-  Medium = 'medium',
-  Large = 'large',
-  ExtraLarge = 'extra-large',
+  ExtraSmall = 'p2-text',
+  Small = 'p1-text',
+  Medium = 'h6-text',
+  Large = 'h5-text',
+  ExtraLarge = 'h4-text',
 };
 
 enum Type {

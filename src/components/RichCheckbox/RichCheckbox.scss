@@ -1,0 +1,11 @@
+@import '../../scss/global.scss';
+
+.rich-checkbox {
+  align-items: center;
+  display: flex;
+
+  .rich-label {
+    align-self: center;
+    font-weight: 400;
+  };
+};

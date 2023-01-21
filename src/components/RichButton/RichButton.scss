@@ -3,15 +3,18 @@
 .rich-button {
   @include centered-flex-box;
   border-style: solid;
-  box-shadow: none !important;
+  box-shadow: none;
   font-family: $paragraph-font-family;
-  outline: none !important;
+  outline: none;
   padding: $medium-padding $extra-large-padding;
   cursor: pointer;
   user-select: none;
 
   &:disabled {
+    background-color: $disabled-grey;
+    border-color: $disabled-grey;
     opacity: 0.3;
+    pointer-events: none;
   };
 
   // Neutral Button Colors
@@ -24,6 +27,7 @@
       background-color: $light-grey;
     };
   };
+
   &.off-white {
     border-color: $off-white;
     background-color: $off-white;
@@ -33,6 +37,7 @@
       background-color: $light-grey;
     };
   };
+
   &.black {
     border-color: $black;
     background-color: $black;
@@ -42,6 +47,7 @@
       background-color: $dark-grey;
     };
   };
+
   &.off-black {
     border-color: $off-black;
     background-color: $off-black;
@@ -51,6 +57,7 @@
       background-color: $medium-grey;
     };
   };
+
   &.light-grey {
     border-color: $light-grey;
     background-color: $light-grey;
@@ -60,6 +67,7 @@
       background-color: $off-white;
     };
   };
+
   &.grey {
     border-color: $grey;
     background-color: $grey;
@@ -69,6 +77,7 @@
       background-color: $dark-grey;
     };
   };
+
   &.medium-grey {
     border-color: $medium-grey;
     background-color: $medium-grey;
@@ -78,6 +87,7 @@
       background-color: $dark-grey;
     };
   };
+
   &.dark-grey {
     border-color: $dark-grey;
     background-color: $dark-grey;
@@ -87,6 +97,7 @@
       background-color: $off-black;
     };
   };
+
   // Non-Neutral Button Colors
   &.primary-red {
     border-color: $primary-red;
@@ -97,6 +108,7 @@
       background-color: $secondary-red;
     };
   };
+
   &.secondary-red {
     border-color: $secondary-red;
     background-color: $secondary-red;
@@ -106,6 +118,7 @@
       background-color: $primary-red;
     };
   };
+
   &.primary-yellow {
     border-color: $primary-yellow;
     background-color: $primary-yellow;
@@ -115,6 +128,7 @@
       background-color: $secondary-yellow;
     };
   };
+
   &.secondary-yellow {
     border-color: $secondary-yellow;
     background-color: $secondary-yellow;
@@ -124,6 +138,7 @@
       background-color: $primary-yellow;
     };
   };
+
   &.primary-green {
     border-color: $primary-green;
     background-color: $primary-green;
@@ -133,6 +148,7 @@
       background-color: $secondary-green;
     };
   };
+
   &.secondary-green {
     border-color: $secondary-green;
     background-color: $secondary-green;
@@ -142,6 +158,7 @@
       background-color: $primary-green;
     };
   };
+
   &.primary-teal {
     border-color: $primary-teal;
     background-color: $primary-teal;
@@ -151,6 +168,7 @@
       background-color: $secondary-teal;
     };
   };
+
   &.secondary-teal {
     border-color: $secondary-teal;
     background-color: $secondary-teal;
@@ -160,6 +178,7 @@
       background-color: $primary-teal;
     };
   };
+
   &.primary-blue {
     border-color: $primary-blue;
     background-color: $primary-blue;
@@ -169,6 +188,7 @@
       background-color: $secondary-blue;
     };
   };
+
   &.secondary-blue {
     border-color: $secondary-blue;
     background-color: $secondary-blue;
@@ -178,6 +198,7 @@
       background-color: $primary-blue;
     };
   };
+
   &.primary-purple {
     border-color: $primary-purple;
     background-color: $primary-purple;
@@ -187,6 +208,7 @@
       background-color: $secondary-purple;
     };
   };
+
   &.secondary-purple {
     border-color: $secondary-purple;
     background-color: $secondary-purple;
@@ -196,6 +218,7 @@
       background-color: $primary-purple;
     };
   };
+
   &.transparent {
     background-color: transparent !important;
 
@@ -206,48 +229,56 @@
         color: $light-grey;
       };
     };
+
     &.off-white {
       color: $off-white;
       &:hover {
         color: $light-grey;
       };
     };
+
     &.black {
       color: $black;
       &:hover {
         color: $dark-grey;
       };
     };
+
     &.off-black {
       color: $off-black;
       &:hover {
         color: $medium-grey;
       };
     };
+
     &.light-grey {
       color: $light-grey;
       &:hover {
         color: $off-white;
       };
     };
+
     &.grey {
       color: $grey;
       &:hover {
         color: $dark-grey;
       };
     };
+
     &.medium-grey {
       color: $medium-grey;
       &:hover {
         color: $dark-grey;
       };
     };
+
     &.dark-grey {
       color: $dark-grey;
       &:hover {
         color: $off-black;
       };
     };
+
     // Non-Neutral Button Colors
     &.primary-red {
       color: $primary-red;
@@ -255,66 +286,77 @@
         color: $secondary-red;
       };
     };
+
     &.secondary-red {
       color: $secondary-red;
       &:hover {
         color: $primary-red;
       };
     };
+
     &.primary-yellow {
       color: $primary-yellow;
       &:hover {
         color: $secondary-yellow;
       };
     };
+
     &.secondary-yellow {
       color: $secondary-yellow;
       &:hover {
         color: $primary-yellow;
       };
     };
+
     &.primary-green {
       color: $primary-green;
       &:hover {
         color: $secondary-green;
       };
     };
+
     &.secondary-green {
       color: $secondary-green;
       &:hover {
         color: $primary-green;
       };
     };
+
     &.primary-teal {
       color: $primary-teal;
       &:hover {
         color: $secondary-teal;
       };
     };
+
     &.secondary-teal {
       color: $secondary-teal;
       &:hover {
         color: $primary-teal;
       };
     };
+
     &.primary-blue {
       color: $primary-blue;
       &:hover {
         color: $secondary-blue;
       };
     };
+
     &.secondary-blue {
       color: $secondary-blue;
       &:hover {
         color: $primary-blue;
       };
     };
+
     &.primary-purple {
       color: $primary-purple;
       &:hover {
         color: $secondary-purple;
       };
     };
+
     &.secondary-purple {
       color: $secondary-purple;
       &:hover {
@@ -327,17 +369,14 @@
     border: none;
     padding: $small-padding $medium-padding;
   };
+
   &.solid, &.outline { border-radius: $small-border-radius; };
+
   &.pill, &.outline-pill {  border-radius: $extra-large-border-radius; };
+
   &.underline {
     border: none;
     border-bottom: solid 2px;
     padding-bottom: $small-padding;
   };
-
-  &.extra-small { font-size: $paragraph-font-size; };
-  &.small { font-size: $sub-header-font-size; };
-  &.medium { font-size: $header-font-size; };
-  &.large { font-size: $large-header-font-size; };
-  &.extra-large { font-size: $small-title-font-size; };
 };
